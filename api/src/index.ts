@@ -5,10 +5,13 @@ loadConfig();
 
 const app: Express = express();
 
-app.get('/', (req, res) => {
-    res.send(`NodeJs server running on port ${PORT}`);
+app.get('/', (req, res)=> {
+  res.send(`NodeJs server running on port ${PORT}`
+  
+  
+  );
 });
 
 app.listen(PORT, () => {
-    console.log(`[server]: Server is running at http://localhost:${PORT}`);
+  console.log(`[server]: Server is running at http://localhost:${PORT}`);
 });
