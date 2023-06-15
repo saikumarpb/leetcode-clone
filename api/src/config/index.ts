@@ -1,4 +1,4 @@
-import {config} from "dotenv"
+import { config } from 'dotenv';
 
 let PORT: number;
 
@@ -6,8 +6,8 @@ let PORT: number;
  * Loads config from .env file
  */
 function loadConfig() {
-    config()
-    PORT= parseInt(process.env.PORT??"3000")
+  config();
+  PORT = parseInt(process.env.PORT ?? '3000');
 }
 
-export {PORT, loadConfig}
+export { PORT, loadConfig };
