@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node ./dist/index.js",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q ./dist/index.js\""
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "lint": "concurrently \"eslint src/**/*.ts\" \"eslint src/*.ts\"",
+    "format": "concurrently \"eslint src/**/*.ts --fix\" \"eslint src/*.ts --fix\""
   },
   "author": "Sai Kumar P B",
   "license": "ISC",
@@ -19,8 +21,16 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
     "concurrently": "^8.2.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.22",
-    "typescript": "^5.1.3"
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
